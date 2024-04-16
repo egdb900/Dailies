@@ -4,12 +4,10 @@ class Solution(object):
         :type height: List[int]
         :rtype: int
         """
-        n = len(height)
         max_area = 0
-        l, r = 0, n-1
+        l, r = 0, len(height) - 1
         while l != r:
-            curr_area = min(height[l], height[r])*(r - l)
-            print(height[l], height[r], curr_area)
+            curr_area = min(height[l], height[r]) * (r - l)
             if max_area < curr_area:
                 max_area = curr_area
             
