@@ -4,7 +4,6 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        s = s.strip()
         tokens = s.split(" ")
         tokens = filter(lambda x: x != "", tokens)
 
