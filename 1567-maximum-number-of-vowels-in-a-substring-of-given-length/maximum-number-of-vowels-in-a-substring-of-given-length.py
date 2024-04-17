@@ -6,8 +6,6 @@ class Solution(object):
         :rtype: int
         """
         vowels = ["a", "e", "i", "o", "u"]
-
-        
         curr_vowels = 0
         for token in s[:k]:
             if token in vowels:
