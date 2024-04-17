@@ -9,9 +9,8 @@ class Solution(object):
 
         
         curr_vowels = 0
-        substring = s[0:k]
-        for i in range(k):
-            if s[i] in vowels:
+        for token in s[:k]:
+            if token in vowels:
                 curr_vowels += 1
         max_vowels = curr_vowels
 
@@ -20,9 +19,7 @@ class Solution(object):
                 curr_vowels -= 1
             if s[i+k] in vowels:
                 curr_vowels += 1
-            if max_vowels < curr_vowels:
-                max_vowels = curr_vowels
-        
+            max_vowels = max(max_vowels, curr_vowels)
         return max_vowels
 
 
