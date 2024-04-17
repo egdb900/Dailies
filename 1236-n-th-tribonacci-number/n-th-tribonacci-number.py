@@ -8,10 +8,8 @@ class Solution(object):
         if n < 3:
             return T[n]
 
-        T_n = len(T)
-        for i in range(n-T_n+1):
-            T_i = sum(T[len(T)-T_n:len(T)])
-            T.append(T_i)
+        for i in range(3, n+1):
+            T.append(sum(T[i-3:i]))
         return T[-1]
 
 
