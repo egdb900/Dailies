@@ -9,7 +9,7 @@ class Solution(object):
             return T[n]
 
         for i in range(3, n+1):
-            T.append(sum(T[i-3:i]))
+            T.append(T[i-3] + T[i-2] + T[i-1])
         return T[-1]
 
 
