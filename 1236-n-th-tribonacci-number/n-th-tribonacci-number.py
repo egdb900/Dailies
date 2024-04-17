@@ -10,7 +10,7 @@ class Solution(object):
 
         for i in range(3, n+1):
             T.append(T[i-3] + T[i-2] + T[i-1])
-        return T[-1]
+        return T[n]
 
 
         
