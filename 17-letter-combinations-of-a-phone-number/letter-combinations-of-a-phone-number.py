@@ -4,6 +4,9 @@ class Solution(object):
         :type digits: str
         :rtype: List[str]
         """
+        if not len(digits):
+            return []
+
         res = []
         phone = {
             "2": "abc",
@@ -23,6 +26,6 @@ class Solution(object):
             else:
                 for c in phone[digits[i]]:
                     backTrack(i+1, curr_str+c)
-        if len(digits):
-            backTrack(0, "")
+    
+        backTrack(0, '')
         return res
