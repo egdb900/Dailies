@@ -5,13 +5,6 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[List[int]]
         """
-        diff1 = []
-        for n in nums1:
-            if n not in nums2:
-                diff1.append(n)
-        diff2 = []
-        for n in nums2:
-            if n not in nums1:
-                diff2.append(n)
-        return [set(diff1), set(diff2)]
+        nums1, nums2 = set(nums1), set(nums2)
+        return [nums1-nums2, nums2-nums1]
         
