@@ -12,6 +12,4 @@ class Solution(object):
                 j = num
             else:
                 return True
-
-
         return False
