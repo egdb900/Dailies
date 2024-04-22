@@ -4,7 +4,7 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+        vowels = "aeiouAEIOU"
         c = list(s)
         l, r = 0, len(s) - 1
         while l < r:
@@ -15,6 +15,9 @@ class Solution(object):
             elif s[l] not in vowels:
                 l += 1
             elif s[r] not in vowels:
+                r -= 1
+            else:
+                l += 1
                 r -= 1
         return ''.join(c)
             
