@@ -9,12 +9,9 @@ class Solution(object):
         maxOnes = 0
 
         for num in nums:
-            if nums[r] == 0:
-                k -= 1
-            if k < 0 and nums[l] == 0:
-                k += 1
-                l += 1
-            elif k < 0 and nums[l] != 0:
+            k -= 1 - nums[r]
+            if k < 0:
+                k += 1 - nums[l]
                 l += 1
             else:
                 maxOnes = max(maxOnes, r - l + 1)
