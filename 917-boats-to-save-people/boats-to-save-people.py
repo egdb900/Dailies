@@ -5,7 +5,6 @@ class Solution(object):
         :type limit: int
         :rtype: int
         """
-        boats = 0
         people.sort(reverse=True)
         l, r = 0, len(people)-1
         while l <= r:
