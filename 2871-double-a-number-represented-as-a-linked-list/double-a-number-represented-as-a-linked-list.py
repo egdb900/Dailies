@@ -18,7 +18,6 @@ class Solution(object):
                     head = prev
                 curr.val -= 10
                 prev.val += 1
-
             prev = curr
             curr = curr.next
         return head
