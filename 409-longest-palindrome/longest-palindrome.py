@@ -5,16 +5,14 @@ class Solution(object):
         :rtype: int
         """
         letters = set(s)
-        res = 0
+        res = len(s)
         odd = 0
         for letter in letters:
             occurences = s.count(letter)
-            if occurences % 2 == 0:
-                res += occurences
-            else:
-                odd = 1
-                res += occurences - 1
-        res += odd
+            if occurences % 2 != 0:
+                odd += 1
+        if odd > 0:
+            res = res - odd + 1
             
         return res
         
