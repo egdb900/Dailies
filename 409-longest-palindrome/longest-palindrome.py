@@ -12,7 +12,7 @@ class Solution(object):
             if occurences % 2 != 0:
                 odd += 1
         if odd > 0:
-            res = res - odd + 1
+            res += -odd + 1
             
         return res
         
